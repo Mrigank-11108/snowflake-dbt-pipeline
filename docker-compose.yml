@@ -1,8 +1,8 @@
 version: '3.8'
 services:
   db:
-    image: postgres:latest  # Updated to latest
-    container_name: my_postgres_container
+    image: postgres:latest 
+    container_name: postgres:latest
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: hevo@123
@@ -13,4 +13,4 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
 volumes:
-  postgres_data:
+  postgres_data1:
