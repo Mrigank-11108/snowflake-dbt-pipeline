@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: customers
+    description: "Materialized table joining raw demographics with aggregated order and payment data."
+    columns:
+      - name: customer_id
+        description: "The primary key for this table."
+        tests:
+          - unique
+          - not_null
+
+      - name: number_of_orders
+        description: "The total count of orders per customer."
+        tests:
+          - not_null
+
+      - name: customer_lifetime_value
+        description: "The total sum of all payments made by the customer."
